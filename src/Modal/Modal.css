@@ -1,0 +1,13 @@
+.modalBackground {
+    position: fixed;
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    display: flex;
+    background-color: rgba(255, 127, 17, 0.3);
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    
+}

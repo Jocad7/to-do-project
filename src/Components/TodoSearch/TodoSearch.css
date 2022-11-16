@@ -1,0 +1,18 @@
+.TodoSearch {
+    align-self: center;
+    background-color: #f7c9ba;
+    width: calc(100% - 70px);
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(63, 64, 65);
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+}
+.TodoSearch:focus {
+    outline-color: #dd6b45;
+}
+.TodoSearch::placeholder {
+    color: #fff;
+}

@@ -1,0 +1,35 @@
+.TodoButtom {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ff7b4f;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 100;
+}
+@keyframes buttonRotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.TodoButtom:hover {
+    background-color: #ff3f00;
+    animation-name: buttonRotate;
+    animation-duration: .9s;
+}
+.TodoButtom:active {
+    transform: scale(0.985);
+    color: #ff3f00;
+    background-color: #fff;
+    border: solid 1px #ff3f00;
+    transition: all .2s ease-in;
+}
