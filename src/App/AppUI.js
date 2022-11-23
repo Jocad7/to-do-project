@@ -1,6 +1,8 @@
 import React from 'react';
 import { TodoContext } from '../TodoContext';
 import { TodoHeader } from '../TodoHeader';
+import { TodoCounter } from '../Components/TodoCounter/TodoCounter';
+import { TodoSearch } from '../Components/TodoSearch/TodoSearch';
 import { TodoList } from '../Components/TodoList/TodoList'
 import { TodoItem } from '../Components/TodoItem/TodoItem';
 import { Modal } from '../Modal';
@@ -28,12 +30,10 @@ function AppUI() {
    
     return(
         <>
-         <TodoHeader
-          completeTodos= {completeTodos}
-          totalTodos= {totalTodos}
-          searchValue = {searchValue}
-          setSearchValue= {setSearchValue}
-         />
+         <TodoHeader>
+            <TodoCounter completeTodos={completeTodos} totalTodos={totalTodos}/>
+            {totalTodos !== 0 && <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue}/>}
+         </TodoHeader>
 
             <TodoList>
               {error && <TodosError error={error}/>}

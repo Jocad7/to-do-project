@@ -16,5 +16,5 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  
+  min-width: 400px;
 }
