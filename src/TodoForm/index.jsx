@@ -1,5 +1,5 @@
 import React from "react";
-import { TodoContext } from '../TodoContext';
+import { useTodos } from '../App/useTodos';
 import "./todoForm.css"
 
 function TodoForm() {
@@ -7,7 +7,7 @@ function TodoForm() {
     const {
         addTodos,
         setOpenModal,
-    } = React.useContext(TodoContext)
+    } = useTodos();
 
     const onCancel = ()=> {
         setOpenModal(false)
