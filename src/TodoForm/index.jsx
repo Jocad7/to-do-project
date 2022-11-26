@@ -1,13 +1,10 @@
 import React from "react";
-import { useTodos } from '../App/useTodos';
 import "./todoForm.css"
 
-function TodoForm() {
+function TodoForm({ addTodos, setOpenModal }) {
     const [newTodoValue, setNewTodoValue] = React.useState('');
-    const {
-        addTodos,
-        setOpenModal,
-    } = useTodos();
+
+   
 
     const onCancel = ()=> {
         setOpenModal(false)

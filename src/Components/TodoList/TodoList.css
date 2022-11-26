@@ -1,5 +1,8 @@
 ul {
-    margin: 0;
-    padding: 0 0 50px 0;
+    margin: 20px;
+    padding: 20px;
     list-style: none;
+    border: 2px orange dotted;
+    background: rgb(253, 239, 235);
+    border-radius: 12px;
 }
