@@ -1,0 +1,29 @@
+.changeAlert {
+    position: fixed;
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(68, 64, 64, 0.3);
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    z-index: 300; 
+}
+
+.bton {
+    border-radius: 50px;
+    padding: 20px;
+    border: unset;
+    color: orangered;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0px 1px 21px 3px rgba(117,117,117,1);
+}
+
+.bton:hover {
+    transform: scale(1.05);
+    transition: transform .5s ease-out;
+}

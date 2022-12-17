@@ -13,7 +13,9 @@ import { CreateTodoButton } from '../Components/CreateTodoButton/CreateTodoButto
 import { TodosError } from '../TodosError';
 import { TodosLoading } from '../TodosLoading';
 import { EmptyTodos } from '../EmptyTodos';
+import { ChangeAlertWithStorageListener } from '../ChangeAlert';
 import './App.css';
+
 
 
 function App() {
@@ -30,17 +32,22 @@ function App() {
     searchValue, 
     setSearchValue,
     addTodos,
+    sincronizedTodos,
    
   } = useTodos();
 
   return(
         <>
-         <TodoHeader>
+         <TodoHeader loading={loading}>
             <TodoCounter 
             completeTodos={completeTodos} 
             totalTodos={totalTodos}
             />
-            {totalTodos !== 0 && <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue}/>}
+            {/* {totalTodos !== 0 && <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue}/>} */}
+            <TodoSearch 
+            searchValue={searchValue} 
+            setSearchValue={setSearchValue}
+            />
          </TodoHeader>
 
             <TodoList 
@@ -63,6 +70,7 @@ function App() {
                 <TodoItem 
                 key = {todo.text} 
                 text={todo.text}
+                loading = {loading}
                 completed={todo.completed}
                 onComplete = {()=> completedTodos(todo.text)}
                 onDelete = {()=> deleteTodo(todo.text)}
@@ -91,9 +99,17 @@ function App() {
             </Modal>
           )}
           
+         
+              <ChangeAlertWithStorageListener
+                sincronize={sincronizedTodos}
+              />
+         
+
         <CreateTodoButton
           setOpenModal = {setOpenModal}
+          loading = {loading}
         />  
+        
       </>
     );
 }

@@ -8,8 +8,9 @@ const CreateTodoButton = (props) => {
     }
     return (
         <button
-         className='TodoButtom'
+         className={`TodoButtom ${!!props.loading && 'button--loading'}`}
          onClick={onClickButton}
+         disabled={false}
         >
             +
         </button>

@@ -3,7 +3,7 @@ import React from "react"
 import './TodoSearch.css'
 
 
-const TodoSearch = ({ searchValue, setSearchValue }) => {
+const TodoSearch = ({ searchValue, setSearchValue, loading }) => {
        
     const onSearchValueChange = (event)=> {
         console.log(event.target.value);
@@ -16,6 +16,7 @@ const TodoSearch = ({ searchValue, setSearchValue }) => {
     placeholder= "Buscar"
     value={searchValue}
     onChange={onSearchValueChange}
+    disabled={loading}
     />
     )
     

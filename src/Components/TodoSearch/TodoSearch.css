@@ -16,3 +16,8 @@
 .TodoSearch::placeholder {
     color: #fff;
 }
+
+.TodoSearch:disabled {
+    opacity: 30%;
+    
+}

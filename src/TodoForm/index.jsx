@@ -12,13 +12,19 @@ function TodoForm({ addTodos, setOpenModal }) {
     const onChange = (event) => {
         setNewTodoValue(event.target.value);
     }
+    const characterValidation = (input)=>{
+        let regex = /[a-zA-Z]|\d/i;
+        return regex.test(input);
+    }
     const onSubmit = (event)=> {
         event.preventDefault();
-        addTodos(newTodoValue);
-        setOpenModal(false);
+        if(characterValidation(newTodoValue)){
+            addTodos(newTodoValue);
+            setOpenModal(false);
+        }
     }
     const onKeyUp = (e) => {
-        if (e.charCode === 13) {
+        if (e.charCode === 13 && characterValidation(newTodoValue)) {
           e.preventDefault();
           addTodos(newTodoValue);
           onCancel();
@@ -34,6 +40,7 @@ function TodoForm({ addTodos, setOpenModal }) {
             Ingresa un nuevo TODOs
         </label>
         <textarea 
+        className={!characterValidation(newTodoValue) ? 'textareaInvalidCharacter' : 'textarea'}
         value ={newTodoValue}
         onChange={onChange}
         placeholder="Escribe que tarea tienes por hacer..."
@@ -47,6 +54,7 @@ function TodoForm({ addTodos, setOpenModal }) {
                 Cancelar
             </button>
             <button
+                disabled={!characterValidation(newTodoValue)}
                 className="TodoForm-button TodoForm-button--add"
                 type="submit"
             >

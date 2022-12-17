@@ -11,7 +11,7 @@ const TodoItem = (props) => {
     //     alert(`Borraste el Todo "${props.text}"`);
     // }
     return (
-        <li className='TodoItem'>
+        <li className={`TodoItem ${!!props.loading && 'TodoItem--loading'}`}>
             {/* <span className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
             onClick={props.onComplete}>
                 ☑
