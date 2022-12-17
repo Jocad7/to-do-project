@@ -36,7 +36,7 @@ function useTodos() {
       
       const addTodos =  (text)=>{
            
-        const newTodos = [...todos]
+        const newTodos = [...todos];
         newTodos.push({
           completed: false,
           text,

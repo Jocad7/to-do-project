@@ -47,6 +47,7 @@ function App() {
             <TodoSearch 
             searchValue={searchValue} 
             setSearchValue={setSearchValue}
+            totalTodos={totalTodos}
             />
          </TodoHeader>
 
