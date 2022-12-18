@@ -82,3 +82,8 @@ form {
   .TodoForm-button--cancel {
     background: transparent;
   }
+
+  .TodoForm-button--cancel:hover{
+    background: rgb(211, 208, 208);
+    color: #fff;
+  }
