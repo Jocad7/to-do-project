@@ -5,4 +5,6 @@ ul {
     border: 2px orange dotted;
     background: rgb(253, 239, 235);
     border-radius: 12px;
+    overflow: hidden;
+    font-family: 'Pacifico', cursive;
 }

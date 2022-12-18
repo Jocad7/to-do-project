@@ -107,6 +107,7 @@ function App() {
          
 
         <CreateTodoButton
+          openModal = {openModal}
           setOpenModal = {setOpenModal}
           loading = {loading}
         />  

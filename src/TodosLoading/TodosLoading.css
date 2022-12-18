@@ -52,3 +52,9 @@
         background-position: 0% 50%;
     }
 }
+
+.CircleLoad-container{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+}
